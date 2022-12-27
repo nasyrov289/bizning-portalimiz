@@ -1,7 +1,7 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '2.7.7'
-    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+    id 'org.springframework.boot' version '2.7.5'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 }
 
 group = 'ui.tilachar'
@@ -20,9 +20,15 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'com.github.goxr3plus:java-google-speech-api'
+    implementation 'com.ibm.icu:icu4j:64.2'
+    implementation 'commons-lang:commons-lang:2.6'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'com.google.cloud:google-cloud-speech:4.2.0'
+    implementation 'com.google.cloud:google-cloud-translate-bom:1.94.3'
+    implementation 'com.google.cloud:google-cloud-translate:2.7.0'
 }
 
 tasks.named('test') {
